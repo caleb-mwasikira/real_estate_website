@@ -1,0 +1,111 @@
+.apartment_card {
+    width: 20rem;
+    height: 100%;
+    margin: 1rem;
+    font-size: 1rem;
+    background-color: var(--color_white);
+    box-shadow: .1rem .1rem 1rem var(--color_dark);
+    border-radius: .5rem;
+}
+
+.apartment_image {
+    width: 100%;
+    height: 40%;
+    position: relative;
+}
+
+.apartment_image img {
+    width: 100%;
+    height: 10rem;
+    object-fit: cover;
+    border-radius: .5rem .5rem 0rem 0rem;
+}
+
+.apartment_image i {
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+    margin: .8rem;
+    padding: .3rem;
+    font-size: 1.2rem;
+    color: var(--color_white);
+    background-color: #757575;
+    opacity: .8;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.apartment_image .is_starred {
+    color: var(--color_danger);
+}
+
+.apartment_details {
+    position: relative;
+    font-weight: 600;
+    font-size: .9rem;
+}
+
+.sale_status_tag {
+    position: absolute;
+    bottom: -1.4rem;
+    right: 0rem;
+    padding: .2rem .5rem;
+    font-size: .9rem;
+    font-weight: 700;
+    cursor: pointer;
+    color: var(--color_white);
+    background-color: var(--color_primary);
+    border-radius: .2rem;
+}
+
+.sale_status_tag:hover {
+    transform: scale(1.1);
+    transition: ease-in-out 500ms;
+}
+
+.apartment_price {
+    color: var(--color_success);
+    font-size: 1.3rem;
+}
+
+.apartment_price, 
+.apartment_desc,
+.location_details {
+    padding: 0rem .5rem;
+}
+
+.location_details {
+    display: flex;
+    flex-direction: row;
+    color: grey;
+}
+
+.location_details i {
+    padding: .2rem;
+    margin: auto .1rem;
+}
+
+.apartment_address {
+    font-size: .9rem;
+}
+
+.facilities {
+    margin-top: .5rem;
+    justify-content: space-around;
+    border-top: .1rem solid rgb(207, 207, 207);
+}
+
+.facilities, .facility {
+    display: flex;
+    flex-direction: row;
+}
+
+.facility {
+    cursor: pointer;
+}
+
+.facility i {
+    color: var(--color_success);
+    font-size: 1.2rem;
+    margin: auto .1rem;
+}

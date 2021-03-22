@@ -8,8 +8,12 @@ body {
 :root {
   --color_primary: #00b4d8;
   --color_danger: #FF4365;
+  --color_danger_dark: #a4161a;
   --color_white: #FFFFFA;
-  --color_success: #4C9F70;
+  --color_success: #00c49a;
+  --color_success_dark: #156064;
+  --color_warning: #f7ff26;
+  --color_warning_dark: #ffaa00;
   --color_dark: #1E1E24; 
 }
 
@@ -20,6 +24,10 @@ li {
 a {
   text-decoration: none;
   color: var(--color_dark);
+}
+
+p {
+  margin: .8rem .5rem;
 }
 
 .navbar {
