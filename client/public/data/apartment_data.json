@@ -1,0 +1,791 @@
+[
+    {
+        "formatted_address": "211 S Greenwood Ave, Tulsa, OK 74120, United States",
+        "geometry": {
+            "location": {
+                "lat": 36.1567677,
+                "lng": -95.9840401
+            },
+            "viewport": {
+                "south": 36.15535762010728,
+                "west": -95.98556507989271,
+                "north": 36.15805727989272,
+                "east": -95.98286542010727
+            }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+        "id": "f858c64ee64c6801e0b3a2b5f8d7d1844372af67",
+        "name": "The Edge At East Village",
+        "opening_hours": {
+            "open_now": false
+        },
+        "photos": [
+            {
+                "height": 854,
+                "html_attributions": [
+                    "<a href=\"https://maps.google.com/maps/contrib/100130382233362543985\">The Edge At East Village</a>"
+                ],
+                "width": 1280
+            }
+        ],
+        "place_id": "ChIJpaII83_rtocRiExp7l1Pkb4",
+        "plus_code": {
+            "compound_code": "5248+P9 Tulsa, Oklahoma",
+            "global_code": "86865248+P9"
+        },
+        "rating": 4.3,
+        "reference": "ChIJpaII83_rtocRiExp7l1Pkb4",
+        "types": [
+            "point_of_interest",
+            "establishment"
+        ],
+        "user_ratings_total": 22,
+        "html_attributions": []
+    },
+    {
+        "formatted_address": "110 N Boston Ave, Tulsa, OK 74103, United States",
+        "geometry": {
+            "location": {
+                "lat": 36.1579579,
+                "lng": -95.99238779999999
+            },
+            "viewport": {
+                "south": 36.15665072010728,
+                "west": -95.99361377989271,
+                "north": 36.15935037989272,
+                "east": -95.99091412010728
+            }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+        "id": "2266af9b05245231d6bc4fee9167d84fcd891be0",
+        "name": "The Flats on Archer Apartments",
+        "opening_hours": {
+            "open_now": false
+        },
+        "photos": [
+            {
+                "height": 3840,
+                "html_attributions": [
+                    "<a href=\"https://maps.google.com/maps/contrib/101602854708618706876\">A Google User</a>"
+                ],
+                "width": 5760
+            }
+        ],
+        "place_id": "ChIJrYMFlYLrtocRds_IVtcXWt4",
+        "plus_code": {
+            "compound_code": "5255+52 Tulsa, Oklahoma",
+            "global_code": "86865255+52"
+        },
+        "rating": 4.5,
+        "reference": "ChIJrYMFlYLrtocRds_IVtcXWt4",
+        "types": [
+            "real_estate_agency",
+            "point_of_interest",
+            "establishment"
+        ],
+        "user_ratings_total": 16,
+        "html_attributions": []
+    },
+    {
+        "formatted_address": "522 S Boston Ave, Tulsa, OK 74103, United States",
+        "geometry": {
+            "location": {
+                "lat": 36.15111,
+                "lng": -95.988711
+            },
+            "viewport": {
+                "south": 36.14979527010728,
+                "west": -95.98995752989273,
+                "north": 36.15249492989272,
+                "east": -95.98725787010729
+            }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+        "id": "ee03410910712c7f38b0a3bc9e032b5e71d13baf",
+        "name": "The Meridia Apartments",
+        "photos": [
+            {
+                "height": 827,
+                "html_attributions": [
+                    "<a href=\"https://maps.google.com/maps/contrib/101264501156207239439\">The Meridia</a>"
+                ],
+                "width": 1240
+            }
+        ],
+        "place_id": "ChIJlYod-XvrtocRA8MgH50P_Pg",
+        "plus_code": {
+            "compound_code": "5226+CG Tulsa, Oklahoma",
+            "global_code": "86865226+CG"
+        },
+        "rating": 4,
+        "reference": "ChIJlYod-XvrtocRA8MgH50P_Pg",
+        "types": [
+            "point_of_interest",
+            "establishment"
+        ],
+        "user_ratings_total": 20,
+        "html_attributions": []
+    },
+    {
+        "formatted_address": "1000 S Denver Ave., Tulsa, OK 74119, United States",
+        "geometry": {
+            "location": {
+                "lat": 36.1467098,
+                "lng": -95.9925863
+            },
+            "viewport": {
+                "south": 36.14547682010727,
+                "west": -95.99393357989271,
+                "north": 36.14817647989271,
+                "east": -95.99123392010726
+            }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+        "id": "b62423b652647e761371b0a25d3e883694ae11a6",
+        "name": "Renaissance Uptown",
+        "opening_hours": {
+            "open_now": false
+        },
+        "photos": [
+            {
+                "height": 427,
+                "html_attributions": [
+                    "<a href=\"https://maps.google.com/maps/contrib/101205516399891264700\">Renaissance Uptown</a>"
+                ],
+                "width": 640
+            }
+        ],
+        "place_id": "ChIJtR30u3rrtocR5OFoYVrPjPU",
+        "plus_code": {
+            "compound_code": "42W4+MX Tulsa, Oklahoma",
+            "global_code": "868642W4+MX"
+        },
+        "rating": 3.8,
+        "reference": "ChIJtR30u3rrtocR5OFoYVrPjPU",
+        "types": [
+            "point_of_interest",
+            "establishment"
+        ],
+        "user_ratings_total": 54,
+        "html_attributions": []
+    },
+    {
+        "formatted_address": "324 S Main St, Tulsa, OK 74103, United States",
+        "geometry": {
+            "location": {
+                "lat": 36.1525509,
+                "lng": -95.9908
+            },
+            "viewport": {
+                "south": 36.15122702010728,
+                "west": -95.99207562989272,
+                "north": 36.15392667989272,
+                "east": -95.98937597010728
+            }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+        "id": "2a4cca3730672c42ebb186d0000c5a7d5791a504",
+        "name": "Palace Apartments",
+        "photos": [
+            {
+                "height": 3024,
+                "html_attributions": [
+                    "<a href=\"https://maps.google.com/maps/contrib/102761636745621999763\">Rhys Martin</a>"
+                ],
+                "width": 4032
+            }
+        ],
+        "place_id": "ChIJJw8pdHnrtocRtJtmSQ-uDuo",
+        "plus_code": {
+            "compound_code": "5235+2M Tulsa, Oklahoma",
+            "global_code": "86865235+2M"
+        },
+        "rating": 0,
+        "reference": "ChIJJw8pdHnrtocRtJtmSQ-uDuo",
+        "types": [
+            "point_of_interest",
+            "establishment"
+        ],
+        "user_ratings_total": 0,
+        "html_attributions": []
+    },
+    {
+        "formatted_address": "414 E 4th St, Tulsa, OK 74120, United States",
+        "geometry": {
+            "location": {
+                "lat": 36.1540977,
+                "lng": -95.98461859999999
+            },
+            "viewport": {
+                "south": 36.15292592010728,
+                "west": -95.98605982989271,
+                "north": 36.15562557989272,
+                "east": -95.98336017010728
+            }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+        "id": "9da173148eb3b7f358708228c0a2b6867882655a",
+        "name": "East End Village Apartments and Penthouses",
+        "opening_hours": {
+            "open_now": false
+        },
+        "photos": [
+            {
+                "height": 1242,
+                "html_attributions": [
+                    "<a href=\"https://maps.google.com/maps/contrib/107760086018707740750\">Andy Hall</a>"
+                ],
+                "width": 2208
+            }
+        ],
+        "place_id": "ChIJz6qbS37rtocR9Xc3Ste-Xbs",
+        "plus_code": {
+            "compound_code": "5238+J5 Tulsa, Oklahoma",
+            "global_code": "86865238+J5"
+        },
+        "rating": 3,
+        "reference": "ChIJz6qbS37rtocR9Xc3Ste-Xbs",
+        "types": [
+            "point_of_interest",
+            "establishment"
+        ],
+        "user_ratings_total": 3,
+        "html_attributions": []
+    },
+    {
+        "formatted_address": "1620 S Elwood Ave, Tulsa, OK 74119, United States",
+        "geometry": {
+            "location": {
+                "lat": 36.1390864,
+                "lng": -95.9941678
+            },
+            "viewport": {
+                "south": 36.13774132010728,
+                "west": -95.99528407989273,
+                "north": 36.14044097989272,
+                "east": -95.99258442010728
+            }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+        "id": "faf42cd731bf90b16119280d3001839d56f05131",
+        "name": "Riveroaks Apartments",
+        "place_id": "ChIJx6tqn2jrtocRAn6ulYDVD_c",
+        "plus_code": {
+            "compound_code": "42Q4+J8 Tulsa, Oklahoma",
+            "global_code": "868642Q4+J8"
+        },
+        "rating": 2.5,
+        "reference": "ChIJx6tqn2jrtocRAn6ulYDVD_c",
+        "types": [
+            "point_of_interest",
+            "establishment"
+        ],
+        "user_ratings_total": 8,
+        "html_attributions": []
+    },
+    {
+        "formatted_address": "420 W 11th St, Tulsa, OK 74119, United States",
+        "geometry": {
+            "location": {
+                "lat": 36.1456901,
+                "lng": -95.9943835
+            },
+            "viewport": {
+                "south": 36.14434352010727,
+                "west": -95.99558752989273,
+                "north": 36.14704317989272,
+                "east": -95.99288787010728
+            }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+        "id": "9c6a0dda2b7874e2e747883a1a6bd3049d0ea8c0",
+        "name": "Diana Apartments",
+        "opening_hours": {
+            "open_now": false
+        },
+        "photos": [
+            {
+                "height": 3264,
+                "html_attributions": [
+                    "<a href=\"https://maps.google.com/maps/contrib/106880150105022560302\">A Google User</a>"
+                ],
+                "width": 4912
+            }
+        ],
+        "place_id": "ChIJb33k32_rtocRNdmhxwXOHKk",
+        "plus_code": {
+            "compound_code": "42W4+76 Tulsa, Oklahoma",
+            "global_code": "868642W4+76"
+        },
+        "rating": 2.5,
+        "reference": "ChIJb33k32_rtocRNdmhxwXOHKk",
+        "types": [
+            "point_of_interest",
+            "establishment"
+        ],
+        "user_ratings_total": 2,
+        "html_attributions": []
+    },
+    {
+        "formatted_address": "614 S Elwood Ave, Tulsa, OK 74119, United States",
+        "geometry": {
+            "location": {
+                "lat": 36.1481941,
+                "lng": -95.9942884
+            },
+            "viewport": {
+                "south": 36.14689247010728,
+                "west": -95.99548392989273,
+                "north": 36.14959212989272,
+                "east": -95.99278427010728
+            }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+        "id": "dc713efb33267e2950d1d1fa4f7f7e7d25d4f213",
+        "name": "The Blair Apartments",
+        "opening_hours": {
+            "open_now": false
+        },
+        "place_id": "ChIJi1uofnDrtocRlV_93-xQmM8",
+        "plus_code": {
+            "compound_code": "42X4+77 Tulsa, Oklahoma",
+            "global_code": "868642X4+77"
+        },
+        "rating": 5,
+        "reference": "ChIJi1uofnDrtocRlV_93-xQmM8",
+        "types": [
+            "point_of_interest",
+            "establishment"
+        ],
+        "user_ratings_total": 1,
+        "html_attributions": []
+    },
+    {
+        "formatted_address": "501 W 11th St, Tulsa, OK 74119, United States",
+        "geometry": {
+            "location": {
+                "lat": 36.1461045,
+                "lng": -95.995035
+            },
+            "viewport": {
+                "south": 36.14467362010728,
+                "west": -95.99638337989272,
+                "north": 36.14737327989272,
+                "east": -95.99368372010728
+            }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+        "id": "a1e5933d31cbb17506c129a9a790c3e8bc19a0ab",
+        "name": "Parkewood Apartments",
+        "opening_hours": {
+            "open_now": false
+        },
+        "photos": [
+            {
+                "height": 680,
+                "html_attributions": [
+                    "<a href=\"https://maps.google.com/maps/contrib/114337312860239312127\">A Google User</a>"
+                ],
+                "width": 1024
+            }
+        ],
+        "place_id": "ChIJb33k32_rtocR8KPTGfnJ_90",
+        "plus_code": {
+            "compound_code": "42W3+CX Tulsa, Oklahoma",
+            "global_code": "868642W3+CX"
+        },
+        "rating": 4,
+        "reference": "ChIJb33k32_rtocR8KPTGfnJ_90",
+        "types": [
+            "point_of_interest",
+            "establishment"
+        ],
+        "user_ratings_total": 2,
+        "html_attributions": []
+    },
+    {
+        "formatted_address": "420 S Main St, Tulsa, OK 74103, United States",
+        "geometry": {
+            "location": {
+                "lat": 36.1515792,
+                "lng": -95.9904547
+            },
+            "viewport": {
+                "south": 36.15027892010728,
+                "west": -95.99165962989272,
+                "north": 36.15297857989273,
+                "east": -95.98895997010729
+            }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+        "id": "b52c29a9a4b559525a75fd4cfc8ec6a8cf7478f6",
+        "name": "Mayo 420 Apartments",
+        "opening_hours": {
+            "open_now": false
+        },
+        "photos": [
+            {
+                "height": 5216,
+                "html_attributions": [
+                    "<a href=\"https://maps.google.com/maps/contrib/103825983493735628716\">Peter DeLesDernier</a>"
+                ],
+                "width": 2934
+            }
+        ],
+        "place_id": "ChIJK6vNYnnrtocRpNmqqxMEq7E",
+        "plus_code": {
+            "compound_code": "5225+JR Tulsa, Oklahoma",
+            "global_code": "86865225+JR"
+        },
+        "rating": 3.7,
+        "reference": "ChIJK6vNYnnrtocRpNmqqxMEq7E",
+        "types": [
+            "point_of_interest",
+            "establishment"
+        ],
+        "user_ratings_total": 3,
+        "html_attributions": []
+    },
+    {
+        "formatted_address": "266 E Independence St, Tulsa, OK 74106, United States",
+        "geometry": {
+            "location": {
+                "lat": 36.1657515,
+                "lng": -95.99211059999999
+            },
+            "viewport": {
+                "south": 36.16455407010728,
+                "west": -95.99345977989272,
+                "north": 36.16725372989272,
+                "east": -95.99076012010727
+            }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+        "id": "405c99a786317a2bd778da3690ac1dc7a711c038",
+        "name": "Sunset Plaza Apartments",
+        "opening_hours": {
+            "open_now": false
+        },
+        "place_id": "ChIJuddbA4XrtocRme77G-ns2Kk",
+        "plus_code": {
+            "compound_code": "5285+85 Tulsa, Oklahoma",
+            "global_code": "86865285+85"
+        },
+        "rating": 2.5,
+        "reference": "ChIJuddbA4XrtocRme77G-ns2Kk",
+        "types": [
+            "point_of_interest",
+            "establishment"
+        ],
+        "user_ratings_total": 17,
+        "html_attributions": []
+    },
+    {
+        "formatted_address": "1629 Riverside Dr, Tulsa, OK 74119, United States",
+        "geometry": {
+            "location": {
+                "lat": 36.13919569999999,
+                "lng": -95.9953743
+            },
+            "viewport": {
+                "south": 36.13777532010727,
+                "west": -95.99682587989271,
+                "north": 36.14047497989272,
+                "east": -95.99412622010728
+            }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+        "id": "465d0579c6bce3990e5bee271abba4f4b55a4f2d",
+        "name": "Riverview Apartments",
+        "place_id": "ChIJVVj-6WjrtocRJ4LbEvWpFw0",
+        "plus_code": {
+            "compound_code": "42Q3+MV Tulsa, Oklahoma",
+            "global_code": "868642Q3+MV"
+        },
+        "rating": 5,
+        "reference": "ChIJVVj-6WjrtocRJ4LbEvWpFw0",
+        "types": [
+            "point_of_interest",
+            "establishment"
+        ],
+        "user_ratings_total": 4,
+        "html_attributions": []
+    },
+    {
+        "formatted_address": "115 W 5th St, Tulsa, OK 74103, United States",
+        "geometry": {
+            "location": {
+                "lat": 36.1509867,
+                "lng": -95.9922702
+            },
+            "viewport": {
+                "south": 36.14950527010728,
+                "west": -95.99355227989271,
+                "north": 36.15220492989273,
+                "east": -95.99085262010728
+            }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+        "id": "268ed03e0b0609a89c5a09464e97d69fc9298d76",
+        "name": "The Mayo Hotel Apartments",
+        "opening_hours": {
+            "open_now": false
+        },
+        "photos": [
+            {
+                "height": 1067,
+                "html_attributions": [
+                    "<a href=\"https://maps.google.com/maps/contrib/107302605344630174255\">A Google User</a>"
+                ],
+                "width": 1600
+            }
+        ],
+        "place_id": "ChIJJ2Rs2abrtocRizzCeYRZhNg",
+        "plus_code": {
+            "compound_code": "5225+93 Tulsa, Oklahoma",
+            "global_code": "86865225+93"
+        },
+        "rating": 5,
+        "reference": "ChIJJ2Rs2abrtocRizzCeYRZhNg",
+        "types": [
+            "point_of_interest",
+            "establishment"
+        ],
+        "user_ratings_total": 4,
+        "html_attributions": []
+    },
+    {
+        "formatted_address": "1423 S Peoria Ave, Tulsa, OK 74120, United States",
+        "geometry": {
+            "location": {
+                "lat": 36.14154,
+                "lng": -95.975263
+            },
+            "viewport": {
+                "south": 36.14018947010728,
+                "west": -95.97679392989272,
+                "north": 36.14288912989272,
+                "east": -95.97409427010727
+            }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+        "id": "169c31ea4156d496c397ad0488947f52650178f5",
+        "name": "Genevieve Willett Apartments",
+        "place_id": "ChIJx5vcKprstocR7MDdbJK6YlM",
+        "plus_code": {
+            "compound_code": "42RF+JV Tulsa, Oklahoma",
+            "global_code": "868642RF+JV"
+        },
+        "rating": 0,
+        "reference": "ChIJx5vcKprstocR7MDdbJK6YlM",
+        "types": [
+            "point_of_interest",
+            "establishment"
+        ],
+        "user_ratings_total": 0,
+        "html_attributions": []
+    },
+    {
+        "formatted_address": "10 N Greenwood Ave, Tulsa, OK 74120, United States",
+        "geometry": {
+            "location": {
+                "lat": 36.1589418,
+                "lng": -95.9857669
+            },
+            "viewport": {
+                "south": 36.15761582010727,
+                "west": -95.98704777989272,
+                "north": 36.16031547989272,
+                "east": -95.98434812010727
+            }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+        "id": "535c8452252932ca2ff800fdde4bd6d7da9d2088",
+        "name": "Greenarch",
+        "opening_hours": {
+            "open_now": false
+        },
+        "photos": [
+            {
+                "height": 827,
+                "html_attributions": [
+                    "<a href=\"https://maps.google.com/maps/contrib/111475262315636155774\">Greenarch</a>"
+                ],
+                "width": 1240
+            }
+        ],
+        "place_id": "ChIJkfiEAIHrtocR3kHX_jnjr0o",
+        "plus_code": {
+            "compound_code": "5257+HM Tulsa, Oklahoma",
+            "global_code": "86865257+HM"
+        },
+        "rating": 4.5,
+        "reference": "ChIJkfiEAIHrtocR3kHX_jnjr0o",
+        "types": [
+            "point_of_interest",
+            "establishment"
+        ],
+        "user_ratings_total": 24,
+        "html_attributions": []
+    },
+    {
+        "formatted_address": "10 E Archer St, Tulsa, OK 74103, United States",
+        "geometry": {
+            "location": {
+                "lat": 36.1573301,
+                "lng": -95.99266130000001
+            },
+            "viewport": {
+                "south": 36.15605272010727,
+                "west": -95.99405192989272,
+                "north": 36.15875237989271,
+                "east": -95.99135227010728
+            }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+        "id": "a0df080cfc784bafa039a99143c14776ee365999",
+        "name": "Metro at Brady",
+        "opening_hours": {
+            "open_now": false
+        },
+        "photos": [
+            {
+                "height": 378,
+                "html_attributions": [
+                    "<a href=\"https://maps.google.com/maps/contrib/103235386866165191552\">Metro at Brady</a>"
+                ],
+                "width": 600
+            }
+        ],
+        "place_id": "ChIJCQBEn4LrtocRVALBRZolTNE",
+        "plus_code": {
+            "compound_code": "5244+WW Tulsa, Oklahoma",
+            "global_code": "86865244+WW"
+        },
+        "rating": 4,
+        "reference": "ChIJCQBEn4LrtocRVALBRZolTNE",
+        "types": [
+            "point_of_interest",
+            "establishment"
+        ],
+        "user_ratings_total": 9,
+        "html_attributions": []
+    },
+    {
+        "formatted_address": "403 S Cheyenne Ave, Tulsa, OK 74103, United States",
+        "geometry": {
+            "location": {
+                "lat": 36.1515106,
+                "lng": -95.9926145
+            },
+            "viewport": {
+                "south": 36.15012132010727,
+                "west": -95.99407527989273,
+                "north": 36.15282097989272,
+                "east": -95.99137562010728
+            }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+        "id": "d1695160d03e3800b8f2daeb52ee46a1e80626ca",
+        "name": "The Adams Apartments",
+        "opening_hours": {
+            "open_now": false
+        },
+        "photos": [
+            {
+                "height": 2448,
+                "html_attributions": [
+                    "<a href=\"https://maps.google.com/maps/contrib/114508230453801608779\">A Google User</a>"
+                ],
+                "width": 3264
+            }
+        ],
+        "place_id": "ChIJKYIgHnrrtocRGb4DENnBYwM",
+        "plus_code": {
+            "compound_code": "5224+JX Tulsa, Oklahoma",
+            "global_code": "86865224+JX"
+        },
+        "rating": 4.8,
+        "reference": "ChIJKYIgHnrrtocRGb4DENnBYwM",
+        "types": [
+            "point_of_interest",
+            "establishment"
+        ],
+        "user_ratings_total": 6,
+        "html_attributions": []
+    },
+    {
+        "formatted_address": "20 E Archer St, Tulsa, OK 74103, United States",
+        "geometry": {
+            "location": {
+                "lat": 36.1573119,
+                "lng": -95.9927692
+            },
+            "viewport": {
+                "south": 36.15602712010728,
+                "west": -95.99415357989272,
+                "north": 36.15872677989272,
+                "east": -95.99145392010729
+            }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+        "id": "2a7ac49a0a16085c730c1b4c36df3d5cc8b58b1f",
+        "name": "Tribune Lofts",
+        "opening_hours": {
+            "open_now": false
+        },
+        "photos": [
+            {
+                "height": 480,
+                "html_attributions": [
+                    "<a href=\"https://maps.google.com/maps/contrib/100705471078016758523\">Tribune Lofts</a>"
+                ],
+                "width": 640
+            }
+        ],
+        "place_id": "ChIJV_1ym4LrtocR-2CuTrnavWY",
+        "plus_code": {
+            "compound_code": "5244+WV Tulsa, Oklahoma",
+            "global_code": "86865244+WV"
+        },
+        "rating": 5,
+        "reference": "ChIJV_1ym4LrtocR-2CuTrnavWY",
+        "types": [
+            "point_of_interest",
+            "establishment"
+        ],
+        "user_ratings_total": 2,
+        "html_attributions": []
+    },
+    {
+        "formatted_address": "2 W 6th St, Tulsa, OK 74119, United States",
+        "geometry": {
+            "location": {
+                "lat": 36.1501698,
+                "lng": -95.98978939999999
+            },
+            "viewport": {
+                "south": 36.14891027010728,
+                "west": -95.99118952989272,
+                "north": 36.15160992989273,
+                "east": -95.98848987010729
+            }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+        "id": "7dc24b761d950f218e537182e11fa0de735348fc",
+        "name": "Art Deco Lofts and Apartments",
+        "place_id": "ChIJfem16nvrtocRF-7_h9_C66s",
+        "plus_code": {
+            "compound_code": "5226+33 Tulsa, Oklahoma",
+            "global_code": "86865226+33"
+        },
+        "rating": 0,
+        "reference": "ChIJfem16nvrtocRF-7_h9_C66s",
+        "types": [
+            "point_of_interest",
+            "establishment"
+        ],
+        "user_ratings_total": 0,
+        "html_attributions": []
+    }
+]
