@@ -5,6 +5,7 @@ import fetchApartmentData from "../controllers/fetchData";
 
 import Header from "../components/headers/Header";
 import ApartmentCard from "../components/cards/ApartmentCard";
+import Footer from "../components/footers/Footer";
 
 
 class LandingPage extends Component {
@@ -65,6 +66,8 @@ class LandingPage extends Component {
                         { buildApartmentCards() }
                     </div>
                 </div>
+
+                <Footer />
             </div>
         )
     }
