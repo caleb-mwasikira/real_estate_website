@@ -6,7 +6,7 @@ body {
 }
 
 :root {
-  --color_primary: #00b4d8;
+  --color_primary: #4895ef;
   --color_danger: #FF4365;
   --color_danger_dark: #a4161a;
   --color_white: #FFFFFA;
@@ -47,7 +47,6 @@ p {
   border: none;
   padding: .8rem 1.5rem;
   font-size: 1.1rem;
-  font-weight: 700;
   cursor: pointer;
   color: var(--color_white);
   background-color: var(--color_primary);
