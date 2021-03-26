@@ -19,6 +19,7 @@ class LandingPage extends Component {
 
     async componentDidMount() {
         const apartmentData = await fetchApartmentData();
+        console.log(apartmentData);
 
         this.setState({
             loading: false,
@@ -41,7 +42,7 @@ class LandingPage extends Component {
             const apartmentCards = apartmentData.map((apartment) => {
                 return(
                     <ApartmentCard 
-                        key={ apartment.id.$oid }
+                        key={ apartment._id }
                         apartment_img_url={ apartment.img_url }
                         sale_status={ apartment.sale_status }
                         apartment_price={ apartment.price }

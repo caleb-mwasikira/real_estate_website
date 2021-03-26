@@ -1,7 +1,7 @@
 
 
 function fetchApartmentData() {
-    return fetch("data/apartment_data.json")
+    return fetch("http://localhost:9000/apartments/")
         .then((res) => {
             return res.json();
         });
