@@ -1,19 +1,41 @@
 const User = require("../models/UserModel");
 const { genPassword, validPassword } = require("../lib/passwordUtils");
+const { buildSearchQuery, sendServerError } = require('./BaseController');
 
 
-function sendServerError(res, error) {
-    res.status(500).json({
-        status: "error",
-        message: error.message,
-        error: error
+function getAllUsers(req, res, next) {
+    User.find({}, (error, users) => {
+        if(error) sendServerError(res, error);
+
+        req.data = users;
+        next();
     });
-    return;
 }
 
+function getUser(req, res, next) {
+    const searchQuery = buildSearchQuery(req);
+    const key = Object.keys(searchQuery).shift();
+
+    User.findOne(searchQuery, (error, dbUser) => {
+        if(error) sendServerError(res, error);
+
+        if(!dbUser) {
+            res.status(400).send({
+                status: "fail",
+                data: {
+                    message: `User With ${key} ${searchQuery[key]} Does Not Exist`
+                }
+            });
+            return;
+        } else {
+            req.data = dbUser;
+            next();
+        }
+    });
+}
 
 function signupUser(req, res, next) {
-    const { salt, hash } = genPassword(req.body.password);
+    const { hash, salt } = genPassword(req.body.password);
 
     const newUser = new User({
         username: req.body.username,
@@ -26,16 +48,14 @@ function signupUser(req, res, next) {
     });
 
     newUser.save()
-        .then((user) => {
-            req.data = user;
-            next();
-        })
-        .catch((error) => sendServerError(res, error));
-
+            .then((dbUser) => {
+                req.data = dbUser;
+                next();
+            })
+            .catch((error) => sendServerError(res, error));
 }
 
 function loginUser(req, res, next) {
-
     User.findOne({ email: req.body.email }, (error, dbUser) => {
         if(error) sendServerError(res, error);
 
@@ -52,7 +72,6 @@ function loginUser(req, res, next) {
         if(validPassword(req.body.password, dbUser.password.hash, dbUser.password.salt)) {
             req.data = dbUser;
             next();
-
         } else {
             res.status(400).send({
                 status: "fail",
@@ -62,19 +81,62 @@ function loginUser(req, res, next) {
             });
             return;
         }
-    })
+    });
 }
 
-function getAllUsers(req, res, next) {
-    User.find({}, (error, users) => {
+function updateUser(req, res, next) {
+    const searchQuery = buildSearchQuery(req);
+    const key = Object.keys(searchQuery).shift();
+
+    User.findOneAndUpdate(searchQuery, req.body,
+    {
+        new: true,
+        upsert: true,
+        rawResult: true,
+        useFindAndModify: false
+    }, 
+    (error, dbUser) => {
         if(error) sendServerError(res, error);
 
-        req.data = users;
-        next();
+        if(!dbUser) {
+            res.status(400).send({
+                status: "fail",
+                data: {
+                    message: `User With ${key} ${searchQuery[key]} Does Not Exist`
+                }
+            });
+            return;
+        } else {
+            req.data = dbUser;
+            next();
+        }
     });
+}
+
+function deleteUser(req, res, next) {
+    const searchQuery = buildSearchQuery(req);
+    const key = Object.keys(searchQuery).shift();
+
+    User.deleteOne(searchQuery, (error, dbUser) => {
+        if(error) sendServerError(res, error);
+
+        if(dbUser.n === 0) {
+            res.status(400).send({
+                status: "fail",
+                data: {
+                    message: `User With ${key} ${searchQuery[key]} Does Not Exist`
+                }
+            });
+            return;
+        } else {
+            dbUser.message = `Successfully Deleted User With ${key} ${searchQuery[key]}`;
+            req.data = dbUser;
+            next();
+        }
+    })
 }
 
 
 module.exports = {
-    signupUser, loginUser, getAllUsers
+    getAllUsers, getUser, signupUser, loginUser, updateUser, deleteUser
 }
