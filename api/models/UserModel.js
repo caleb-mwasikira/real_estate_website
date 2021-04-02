@@ -22,7 +22,10 @@ const UserSchema = mongoose.Schema({
             idRSAPublic: String
         }),
     },
-    admin: Boolean,
+    role: {
+        type: String,
+        default: "User"
+    },
     date: { type: Date, default: Date.now }
 });
 

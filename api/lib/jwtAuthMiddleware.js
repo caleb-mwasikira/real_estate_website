@@ -1,6 +1,9 @@
 const dotenv = require('dotenv');
 const jwt = require('jsonwebtoken');
 const path = require('path');
+const url = require('url');
+const { sendServerError } = require('../controllers/BaseController');
+const Authorisation = require('../models/AuthorisationModel');
 
 dotenv.config({ path: path.resolve(__dirname, '../config.env') });
 
@@ -21,7 +24,7 @@ function generateAccessToken(user) {
  * else the endpoint responds with an error status
  * 
  */
-function isAuth(req, res, next) {
+function isAuthenticated(req, res, next) {
     const authHeader = req.headers['authorization']
     const token = authHeader && authHeader.split(' ')[1]
   
@@ -52,30 +55,48 @@ function isAuth(req, res, next) {
 
 /**
  * 
- * After successfull authentication; isAdmin gets the deserialized web token
- * and checks if the user is an Admin.
- * If they are an Admin, the next middleware is called
- * else the endpoint responds with a fail status
- * Use this to restrict access to sensitive/protected URLs
+ * The middleware below checks whether a user is allowed to view a certain resource or not
+ * based on the users role. 
+ * e.g. User John Doe of group 'User' may try to view resources from group 'Marketing' 
+ * or even 'Admin'...this middleware here checks (the database) if they are allowed to do so.
+ * Use this middleware to restrict access to protected routes.
  * 
  */
-function isAdmin(req, res, next) {
+function isAuthorised(req, res, next) {
     const user = req.jwtToken.user;
+    const userAuthorisation = user.role;
+    
+    // load authorisations from the database see what the user is allowed to do
+    Authorisation.findOne({ role: userAuthorisation }, (error, dbAuthorisations) => {
+        if(error) sendServerError(res, error);
 
-    if(user && user.admin) {
-        next();
+        if(!dbAuthorisations) {
+            res.status(400).json({
+                status: "fail",
+                data: {
+                    message: `No Active Access Control Set For Group:${userAuthorisation}`
+                }
+            });
+            return;
+        }
 
-    }else {
-        res.status(403).json({
-            status: "fail",
-            data: {
-                message: "You Are Restricted From Viewing This Resource Because You Are Not Admin"
-            }
-        });
-        return;
-    }
+        const currentURL = `${req.method} ${req.protocol}://${req.get('host')}${req.originalUrl}`;
+        const authorisedURLs = dbAuthorisations.permissions;
+
+        if(authorisedURLs.includes(currentURL)) {
+            next();
+        }else {
+            res.status(401).json({
+                status: "fail",
+                data: {
+                    message: `You Are Not Authorised To View This Resource. Please Contact Your Admin To Increase Your Clearance`
+                }
+            });
+            return;
+        }
+    });
 }
 
 module.exports = {
-    generateAccessToken, isAuth, isAdmin
+    generateAccessToken, isAuthenticated, isAuthorised
 }
