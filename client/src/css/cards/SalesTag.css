@@ -1,0 +1,9 @@
+.sales_tag {
+    padding: .2rem .5rem;
+    font-size: .9rem;
+    text-align: center;
+    cursor: default;
+    color: var(--color_white);
+    background-color: var(--color_primary);
+    border-radius: .2rem;
+}

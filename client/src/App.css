@@ -7,14 +7,16 @@ body {
 
 :root {
   --color_primary: #4895ef;
-  --color_danger: #FF4365;
+  --color_danger: #d62839;
   --color_danger_dark: #a4161a;
-  --color_white: #FFFFFA;
-  --color_success: #00c49a;
+  --color_white: #FFFFFF;
+  --color_bg_shade: #f1f3f4;
+  --color_success: #38b000;
   --color_success_dark: #156064;
   --color_warning: #f7ff26;
   --color_warning_dark: #ffaa00;
-  --color_dark: #1E1E24; 
+  --color_text: #3c4043; 
+  --color_secondary_text: #5f6368;
 }
 
 li {
@@ -27,27 +29,14 @@ a {
 }
 
 p {
-  margin: .8rem .5rem;
-}
-
-.navbar {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  flex-wrap: wrap;
-}
-
-.navbar_item {
-  margin: 1rem;
-  font-size: 1.1rem;
-  font-weight: 600;
+  margin: .5rem;
 }
 
 .btn_filled {
   border: none;
-  padding: .8rem 1.5rem;
-  font-size: 1.1rem;
+  padding: .5rem 1rem;
   cursor: pointer;
+  font-size: 1rem;
   color: var(--color_white);
   background-color: var(--color_primary);
   border-radius: .5rem;

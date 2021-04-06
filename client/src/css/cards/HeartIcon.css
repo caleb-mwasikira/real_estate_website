@@ -1,0 +1,15 @@
+.heart_icon {
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+    margin: .8rem;
+    padding: .3rem;
+    font-size: 1.5rem;
+    color: var(--color_white);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.is_starred {
+    color: var(--color_danger);
+}

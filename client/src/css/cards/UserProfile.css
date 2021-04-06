@@ -1,0 +1,30 @@
+
+.user_profile {
+    display: flex;
+    flex-direction: row;
+    margin: 0rem 1rem;
+}
+
+.user_details {
+    margin: auto .5rem;
+    font-size: 1rem;
+}
+
+.user_details p {
+    margin: .5rem;
+    text-align: left;
+}
+
+.user_details .account_type {
+    font-size: .9rem;
+    color: var(--color_secondary_text);
+}
+
+.user_profile img {
+    width: 4rem;
+    height: 4rem;
+    margin: auto;
+    border-radius: 50%;
+    cursor: pointer;
+    object-fit: cover;
+}

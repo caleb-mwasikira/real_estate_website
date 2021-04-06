@@ -1,0 +1,23 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+select {
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    padding: 0rem;
+    margin: .5rem 0rem;
+    width: 80%;
+    font-family: inherit;
+    font-size: inherit;
+    color:var(--color_text);
+    cursor: inherit;
+    line-height: inherit;
+}
+
+select::-ms-expand {
+    display: none;
+}

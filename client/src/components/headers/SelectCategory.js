@@ -1,14 +1,14 @@
 import React, { Component } from "react";
+import "../../css/headers/SelectCategory.css";
 
-
-class SearchCategory extends Component {
+export default class SelectCategory extends Component {
     render() {
         const { categoryName, categoryList } = this.props;
 
         return (
-            <div className="search_category select">
+            <div className="select_category select">
                 <label htmlFor="">{ categoryName }</label>
-                <select id="standard-select">
+                <select>
                     
                     {
                         categoryList.map((categoryItem, index) => {
@@ -22,5 +22,3 @@ class SearchCategory extends Component {
         )
     }
 }
-
-export default SearchCategory;

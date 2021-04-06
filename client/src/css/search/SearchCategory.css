@@ -1,0 +1,45 @@
+
+.search_pill {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 7rem;
+    padding: 0rem .5rem;
+    margin: .5rem;
+    font-size: .9rem;
+    cursor: pointer;
+    color: var(--color_text);
+    border: .1rem solid rgb(189, 189, 189);
+    border-radius: .5rem;
+}
+
+.search_pill p {
+    margin: .5rem;
+}
+
+.search_pill i {
+    margin: auto .1rem;
+}
+
+.search_options {
+    position: absolute;
+    padding: .5rem 1rem;
+    margin: .5rem;
+    font-size: .9rem;
+    color: var(--color_text);
+    background-color: var(--color_white);
+    z-index: 4;
+    border-radius: 1rem;
+    box-shadow: .1rem .1rem 1rem grey;
+}
+
+.search_option {
+    margin: .5rem auto;
+    padding: .5rem;
+    cursor: pointer;
+    border-radius: .5rem;
+}
+
+.search_option:hover {
+    background-color: #F1F2F6;
+}

@@ -1,28 +1,29 @@
 import React, { Component } from 'react';
-import "../../../css/headers/SearchBar.css";
+import "../../css/headers/SelectBar.css";
 
-import SearchCategory from './SearchCategory';
+import SelectCategory from './SelectCategory';
 
 
-class SearchBar extends Component {    
+export default class SelectBar extends Component {    
     render() {
         const cities = ["Cape Verde", "Mombasa-Kenya", "Chicago"];
         const propertyTypes = ["Bungalow", "Mansion", "Flat"];
 
         return (
-            <div className="search_bar">
-                <ul className="search_actions">
-                    <li className="search_action">Buy</li>
-                    <li className="search_action">Sell</li>
-                    <li className="search_action">Rent</li>
+            <div className="select_bar">
+                <ul className="select_options">
+                    <li className="option selected_option">Buy</li>
+                    <li className="option">Sell</li>
+                    <li className="option">Rent</li>
                 </ul>
+
                 <form method="GET" action=".">
-                    <SearchCategory 
+                    <SelectCategory 
                         categoryName="City/Street"
                         categoryList={ cities }
                     />
 
-                    <SearchCategory
+                    <SelectCategory
                         categoryName="Property Type"
                         categoryList={ propertyTypes }
                     />
@@ -33,5 +34,3 @@ class SearchBar extends Component {
         )
     }
 }
-
-export default SearchBar;

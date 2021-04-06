@@ -1,0 +1,41 @@
+.navbar {
+    width: 95%;
+    margin: auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 1rem;
+    color: var(--color_text);
+}
+
+.navbar_items {
+    margin: 1rem;
+    padding: 0rem;
+}
+
+.navbar, .navbar_items {
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar_item {
+    margin: 1rem;
+    padding: .8rem 1rem;
+    cursor: pointer;
+    border-radius: 2rem;
+    border-bottom: .2rem solid transparent;
+}
+
+.navbar_item:hover {
+    background-color: var(--color_bg_shade);
+    transition: ease-in-out 500ms;
+}
+
+.signup_btn {
+    margin: 2rem 0rem;
+    padding: .8rem 1rem;
+    border-radius: .5rem;
+    color: var(--color_white);
+    background-color: var(--color_primary);
+}
+
+

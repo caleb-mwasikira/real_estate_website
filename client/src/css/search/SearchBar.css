@@ -1,0 +1,38 @@
+form {
+    margin: 2rem auto;
+}
+
+.searchbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 20rem;
+    margin: 0rem auto;
+    padding: .2rem;
+    border: .1rem solid grey;
+    border-radius: .5rem;
+}
+
+.searchbar input {
+    width: 80%;
+    padding: 0rem .5rem;
+    text-align: left;
+    font-family: Oxygen,Ubuntu,Cantarell,sans-serif;
+    border: none;
+}
+
+.searchbar input:focus {
+    outline: none !important;
+}
+
+.search_btn {
+    width: 2rem;
+    height: 2rem;
+    padding: 0rem;
+}
+
+.search_btn i {
+    margin: auto;
+    font-size: 1rem;
+    font-weight: bold;
+}
