@@ -1,0 +1,55 @@
+.apartment_photos {
+    display: flex;
+    flex-direction: column;
+}
+
+.apartment_photo,
+.selected_photo {
+    cursor: pointer;
+}
+
+.selected_photo {
+    width: 100%;
+    margin: auto;
+    height: 20rem;
+    position: relative;
+}
+
+.selected_photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border-radius: .5rem;
+}
+
+.selected_photo .photo_desc {
+    position: absolute;
+    bottom: .5rem;
+    right: .5rem;
+    text-align: right;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color_white);
+}
+
+.more_photos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 1rem 0rem;
+}
+
+.apartment_photo {
+    width: 6rem;
+    height: 6rem;
+    margin: .5rem;
+}
+
+.apartment_photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border-radius: .5rem;
+}

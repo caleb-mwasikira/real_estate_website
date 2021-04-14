@@ -2,8 +2,8 @@ import React from "react";
 import './App.css';
 
 // import LandingPage from "./pages/LandingPage";
-import SignUpPage from "./pages/SignUpPage";
-
+// import SignUpPage from "./pages/SignUpPage";
+import ViewApartment from "./pages/ViewApartment";
 
 export default class App extends React.Component {
   render() {
@@ -11,8 +11,9 @@ export default class App extends React.Component {
       <div className="app">
         {/* <LandingPage /> */}
 
-        <SignUpPage />
+        {/* <SignUpPage /> */}
 
+        <ViewApartment />
       </div>
     );
   }

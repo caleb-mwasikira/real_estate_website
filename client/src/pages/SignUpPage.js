@@ -79,11 +79,6 @@ export default class SignUpPage extends Component {
                     <div className="providers_auth">
                         <p className="helper_text">Or { userIsSigningUp ? "SignUp" : "Login"} With</p>
 
-                        {/* <div className="providers">
-                            <a href="." className="icon_round"><i className="icofont-google-plus" id="google_provider"></i></a>
-                            <a href="." className="icon_round"><i className="icofont-facebook" id="fb_provider"></i></a>
-                        </div> */}
-
                         <div className="providers">
                             <a href=".">
                                 <img src="images/google-logo.png" alt="google_signup"></img>

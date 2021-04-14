@@ -1,11 +1,12 @@
 .apartment_card {
     width: 20rem;
     height: 100%;
-    margin: 1rem;
+    margin: .5rem;
     font-size: 1rem;
     user-select: none;
+    text-align: left;
     background-color: var(--color_white);
-    box-shadow: .1rem .1rem 1rem grey;
+    box-shadow: .1rem .1rem .2rem grey;
     border-radius: .5rem;
 }
 
@@ -25,7 +26,6 @@
 .apartment_details {
     position: relative;
     font-size: .9rem;
-    padding: 1rem 0rem;
 }
 
 .sales_tag {

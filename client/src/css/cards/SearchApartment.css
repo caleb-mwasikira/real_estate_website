@@ -1,0 +1,61 @@
+.search_apartment {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 1rem;
+}
+
+.form_field {
+    margin: 1rem 0rem;
+    text-align: center;
+}
+
+.property_types {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.property_type {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 8rem;
+    height: 5rem;
+    margin: .8rem;
+    cursor: pointer;
+    background-color: var(--color_bg_shade);
+    border-radius: .5rem;
+}
+
+.selected_property {
+    transform: scale(1.1);
+    background-color: var(--color_white);
+    box-shadow: .1rem .1rem .2rem grey;
+}
+
+.property_type img {
+    width: 100%;
+    height: 50%;
+    object-fit: contain;
+    margin: .2rem 0rem;
+}
+
+.property_type p {
+    width: 100%;
+    text-align: center;
+    font-size: .9rem;
+    margin: .2rem 0rem;
+}
+
+.form_btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.btn {
+    margin: .5rem;
+    padding: .5rem 2rem;
+}

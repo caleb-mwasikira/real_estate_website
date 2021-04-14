@@ -1,20 +1,39 @@
+@font-face {
+  font-family: "Inconsolata";
+  src: url("./fonts/Inconsolata.ttf");
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body,
+h1, h2, h3, p {
+  margin: 0;
+}
+
 body {
-  margin: 0rem;
-  padding: 0rem;
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 20px;
+  margin: 0;
+  padding-bottom: 2em;
+  font-family: "Inconsolata", 'Sen', sans-serif;
+  font-size: 2rem;
+  line-height: 1.6;
+}
+
+h3 {
+  font-weight: 900;
+  line-height: 1;
+  font-size: 1.5rem;
 }
 
 :root {
   --color_primary: #4895ef;
+  --color_primary_dark: #0d7eff;
   --color_danger: #d62839;
-  --color_danger_dark: #a4161a;
   --color_white: #FFFFFF;
-  --color_bg_shade: #f1f3f4;
+  --color_bg_shade: #f8f9fa;
   --color_success: #38b000;
-  --color_success_dark: #156064;
   --color_warning: #f7ff26;
-  --color_warning_dark: #ffaa00;
   --color_text: #3c4043; 
   --color_secondary_text: #5f6368;
 }
@@ -32,6 +51,11 @@ p {
   margin: .5rem;
 }
 
+.btn_filled,
+.btn_outlined {
+  font-family: "Inconsolata", 'Sen', sans-serif;
+}
+
 .btn_filled {
   border: none;
   padding: .5rem 1rem;
@@ -39,5 +63,22 @@ p {
   font-size: 1rem;
   color: var(--color_white);
   background-color: var(--color_primary);
-  border-radius: .5rem;
+  border-radius: .2rem;
+}
+
+.btn_outlined {
+  border: .1rem solid var(--color_primary);
+  padding: .5rem 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  color: var(--color_text);
+  background-color: var(--color_white);
+  border-radius: .2rem;
+}
+
+.btn_filled:hover,
+.btn_outlined:hover {
+  color: var(--color_white);
+  background-color: var(--color_primary_dark);
+  transition: ease-in-out 500ms;
 }
