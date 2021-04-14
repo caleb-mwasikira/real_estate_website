@@ -10,11 +10,20 @@
 body,
 h1, h2, h3, p {
   margin: 0;
+  padding: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   margin: 0;
-  padding-bottom: 2em;
+  width: 100vw;
+  min-height: 100vh;
   font-family: "Inconsolata", 'Sen', sans-serif;
   font-size: 2rem;
   line-height: 1.6;
@@ -33,7 +42,7 @@ h3 {
   --color_white: #FFFFFF;
   --color_bg_shade: #f8f9fa;
   --color_success: #38b000;
-  --color_warning: #f7ff26;
+  --color_warning: #ffb703;
   --color_text: #3c4043; 
   --color_secondary_text: #5f6368;
 }

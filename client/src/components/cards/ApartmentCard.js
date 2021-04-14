@@ -27,7 +27,7 @@ export default class ApartmentCard extends Component {
                 background_color = "var(--color_success)";
 
             } else if(sale_status === "Sale Pending") {
-                background_color = "var(--color_warning_dark)";
+                background_color = "var(--color_warning)";
 
             } else if(sale_status === "Sold") {
                 background_color = "var(--color_danger)";

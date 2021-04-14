@@ -1,5 +1,5 @@
 .apartment_card {
-    width: 20rem;
+    width: 18rem;
     height: 100%;
     margin: .5rem;
     font-size: 1rem;
@@ -30,7 +30,7 @@
 
 .sales_tag {
     position: absolute;
-    bottom: -1.4rem;
+    bottom: -1rem;
     right: 0rem;
 }
 

@@ -25,7 +25,7 @@ class FeaturedPost extends Component {
                         { buildPostTags() }
                     </ul>
 
-                    <p className="post_title">{ post_title }</p>
+                    <p className="title">{ post_title }</p>
                     <p className="post_desc">
                         { post_desc }
                     </p>

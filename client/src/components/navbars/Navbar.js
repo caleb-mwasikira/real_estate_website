@@ -35,7 +35,7 @@ class Navbar extends Component {
                         account_type="User"
                         img_url="images/users/foto-sushi-6anudmpILw4-unsplash.jpg"
                     /> :
-                    <a href="." className="signup_btn">SignUp</a>
+                    <a href="." className="btn_filled signup_btn">SignUp</a>
                 }
 
             </div>

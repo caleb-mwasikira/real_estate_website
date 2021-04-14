@@ -3,6 +3,10 @@
 }
 
 /* Start of Header */
+header {
+    margin-bottom: 4rem;
+}
+
 .navbar {
     display: flex;
     flex-direction: row;
@@ -34,8 +38,8 @@
 .display .box_decorator {
     position: absolute;
     top: 5rem;
-    left: 2rem;
-    width: 40%;
+    left: .5rem;
+    width: 80%;
     height: 50%;
     color: var(--color_white);
     background-color: var(--color_primary);
@@ -44,9 +48,9 @@
 
 .display .box_decorator p {
     position: absolute;
-    top: 30%;
-    right: -10rem;
-    width: 80%;
+    top: 40%;
+    left: 5rem;
+    width: 100%;
     font-size: 3rem;
 }
 /* End of Header */
@@ -57,7 +61,7 @@
 }
 
 .featured_apartments .title {
-    margin: 4rem auto;
+    margin: 1rem;
     text-align: center;
 }
 
@@ -70,4 +74,10 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+@media only screen and (min-width: 800px) {
+    .display .box_decorator {
+        width: 50%;
+    }
 }

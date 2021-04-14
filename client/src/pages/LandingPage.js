@@ -32,7 +32,6 @@ export default class LandingPage extends Component {
         const navbarItems = {
             "Home": ".",
             "About": ".",
-            "Features": ".",
             "Contact": ".",
             "Login": ".",
         }

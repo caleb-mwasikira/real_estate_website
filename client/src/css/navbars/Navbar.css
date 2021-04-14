@@ -30,11 +30,7 @@
 }
 
 .signup_btn {
-    margin: 2rem 0rem;
-    padding: .8rem 1rem;
-    border-radius: .5rem;
-    color: var(--color_white);
-    background-color: var(--color_primary);
+    margin: auto 1rem;
 }
 
 
