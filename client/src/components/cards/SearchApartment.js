@@ -32,16 +32,24 @@ export default class SearchApartment extends Component {
         const property_type_items = [];
 
         for(const [key, value] of Object.entries(property_types)) {
-            const propertyTypeClasses = () => {
-                return key === selected_property_type ? "property_type selected_property": "property_type";
+            const selectedIconClasses = () => {
+                let icon_style = {
+                    display: "none"
+                }
+
+                if(key === selected_property_type) {
+                    icon_style['display'] = "block";
+                }
+                return icon_style;
             }
 
             property_type_items.push(
                 <div 
                     key={ key }
-                    className={ propertyTypeClasses() } id={ key }
+                    className="property_type" id={ key }
                     onClick={ () => this.selectPropertyType(key) }
                 >
+                    <i className="icofont-tick-mark selected" style={ selectedIconClasses() }></i>
                     <img src={ value } alt="property_type_icon"></img>
                     <p className="property_type_name">{ key }</p>
                 </div>

@@ -81,11 +81,11 @@ export default class SignUpPage extends Component {
 
                         <div className="providers">
                             <a href=".">
-                                <img src="images/google-logo.png" alt="google_signup"></img>
+                                <img src="images/icons/google-logo.png" alt="google_signup"></img>
                             </a>
 
                             <a href=".">
-                                <img src="images/facebook-logo.png" alt="fb_signup"></img>
+                                <img src="images/icons/facebook-logo.png" alt="fb_signup"></img>
                             </a>
 
                         </div>
