@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
 import Lottie from "lottie-react";
 
-import 'pure-react-carousel/dist/react-carousel.es.css';
 import "../css/pages/ViewApartment.css";
 
 import fetchAPIData from "../controllers/fetchData";
@@ -10,9 +8,9 @@ import loadingAnimation from "../animations/loading.json";
 import errorAnimation from "../animations/error-404-facebook-style.json";
 
 import Navbar from '../components/navbars/Navbar';
-import ApartmentCard from '../components/cards/ApartmentCard';
 import ApartmentPhotos from '../components/cards/ApartmentPhotos';
 import SearchApartment from '../components/cards/SearchApartment';
+import ApartmentCarousel from '../components/cards/ApartmentCarousel';
 
 
 export default class ViewApartment extends Component {
@@ -60,34 +58,9 @@ export default class ViewApartment extends Component {
                 );
             } else {
                 return (
-                    <CarouselProvider
-                        id="carousel_provider"
-                        naturalSlideWidth={ 100 }
-                        naturalSlideHeight={ 60 }
-                        totalSlides={ apartmentData !== null ? apartmentData.length : 0 }
-                    >
-                        <Slider>
-                            {
-                                apartmentData.map((apartment, index) => {
-                                    return(
-                                        <Slide index={ index } key={ apartment._id }>
-                                            <ApartmentCard 
-                                                apartment_img_url={ apartment.img_url }
-                                                sale_status={ apartment.sale_status }
-                                                apartment_price={ apartment.price }
-                                                apartment_desc={ apartment.desc }
-                                                apartment_address={ apartment.address }
-                                                facilities={ null }
-                                            />
-                                        </Slide>
-                                    );
-                                })
-                            }
-                        </Slider>
-
-                        <ButtonBack className="btn_filled" id="prev_btn">Back</ButtonBack>
-                        <ButtonNext className="btn_filled" id="next_btn">Next</ButtonNext>
-                    </CarouselProvider>
+                    <ApartmentCarousel 
+                        apartmentData={ apartmentData }
+                    />
                 );
             }
         }
@@ -149,7 +122,7 @@ export default class ViewApartment extends Component {
                         </div>
 
                         <div className="more_search_results">
-                            <p className="title">1034 Results</p>
+                            <p className="title">{ apartmentData !== null ? apartmentData.length : 0 } Results</p>
 
                            {
                                buildApartmentCards()

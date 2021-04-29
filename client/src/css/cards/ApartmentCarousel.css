@@ -1,0 +1,52 @@
+
+#carousel_provider {
+    position: relative;
+}
+
+/* max-width constrains the width of our carousel, but shrinks on small devices */
+.carousel__container {
+    max-width: 24rem;
+    margin: auto;
+}
+  
+/* gives us the illusion of a "centered" slide */
+.carousel__slider {
+    padding-left: 30%;
+    padding-right: 30%;
+}
+
+/* gives us the illusion of spaces between the slides */
+.carousel__inner-slide {
+    width: calc(100% - 1rem);
+    height: calc(100% - 1rem);
+    left: .5rem;
+    top: .5rem;
+    padding: 2rem 0rem;
+}
+
+.info_message {
+    width: 5rem;
+    height: 5rem;
+    margin: auto;
+}
+
+/* Override ApartmentCard css */
+.apartment_card {
+    padding: .5rem;
+}
+
+.apartment_card .apartment_image img {
+    border-radius: .5rem;
+}
+
+#prev_btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#next_btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
