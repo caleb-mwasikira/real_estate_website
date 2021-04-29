@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
-import { Carousel } from "react-responsive-carousel";
+import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
+import Lottie from "lottie-react";
 
+import 'pure-react-carousel/dist/react-carousel.es.css';
 import "../css/pages/ViewApartment.css";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-import fetchApartmentData from "../controllers/fetchData";
+import fetchAPIData from "../controllers/fetchData";
+import loadingAnimation from "../animations/loading.json";
+import errorAnimation from "../animations/error-404-facebook-style.json";
 
 import Navbar from '../components/navbars/Navbar';
 import ApartmentCard from '../components/cards/ApartmentCard';
@@ -23,7 +26,7 @@ export default class ViewApartment extends Component {
     }
 
     async componentDidMount() {
-        const { status, data } = await fetchApartmentData();
+        const { status, data } = await fetchAPIData("http://localhost:9000/apartments/");
 
         this.setState({
             loading: false,
@@ -43,36 +46,49 @@ export default class ViewApartment extends Component {
 
 
         function buildApartmentCards() {
-            if(loading || responseCode === null) {
+            if(loading) {
                 return(
-                    <div>
-                        <p className="sub_title">Loading Apartment Data...</p>
+                    <div index={ 0 } className="info_message" title="Loading Apartment Data">
+                        <Lottie animationData={ loadingAnimation } />
                     </div>
                 );
-            } else if(responseCode === "fail") {
+            } else if(responseCode === "fail" || responseCode == null) {
                 return(
-                    <div>
-                        <p className="sub_title">Error Loading Data...</p>
+                    <div index={ 0 } className="info_message" title="Error Loading Apartment Data">
+                        <Lottie animationData={ errorAnimation } />
                     </div>
                 );
             } else {
-                const apartmentCards = apartmentData.map((apartment) => {
-                    return(
-                        <div>
-                            <ApartmentCard 
-                                key={ apartment._id }
-                                apartment_img_url={ apartment.img_url }
-                                sale_status={ apartment.sale_status }
-                                apartment_price={ apartment.price }
-                                apartment_desc={ apartment.desc }
-                                apartment_address={ apartment.address }
-                                facilities={ apartment.facilities }
-                            />
-                        </div>
-                    );
-                });
+                return (
+                    <CarouselProvider
+                        id="carousel_provider"
+                        naturalSlideWidth={ 100 }
+                        naturalSlideHeight={ 60 }
+                        totalSlides={ apartmentData !== null ? apartmentData.length : 0 }
+                    >
+                        <Slider>
+                            {
+                                apartmentData.map((apartment, index) => {
+                                    return(
+                                        <Slide index={ index } key={ apartment._id }>
+                                            <ApartmentCard 
+                                                apartment_img_url={ apartment.img_url }
+                                                sale_status={ apartment.sale_status }
+                                                apartment_price={ apartment.price }
+                                                apartment_desc={ apartment.desc }
+                                                apartment_address={ apartment.address }
+                                                facilities={ null }
+                                            />
+                                        </Slide>
+                                    );
+                                })
+                            }
+                        </Slider>
 
-                return apartmentCards;
+                        <ButtonBack className="btn_filled" id="prev_btn">Back</ButtonBack>
+                        <ButtonNext className="btn_filled" id="next_btn">Next</ButtonNext>
+                    </CarouselProvider>
+                );
             }
         }
 
@@ -135,18 +151,9 @@ export default class ViewApartment extends Component {
                         <div className="more_search_results">
                             <p className="title">1034 Results</p>
 
-                            <Carousel 
-                                className="apartment_row"
-                                centerMode={ true }
-                                centerSlidePercentage="70"
-                                showIndicators={ false }
-                                showThumbs={ false }
-                                swipeable={ true }
-                            >
-                                {
-                                    buildApartmentCards()
-                                }
-                            </Carousel>
+                           {
+                               buildApartmentCards()
+                           }
                         </div>
                     </div>
                 </div>

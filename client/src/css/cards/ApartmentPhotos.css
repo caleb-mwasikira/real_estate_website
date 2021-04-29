@@ -1,6 +1,7 @@
 .apartment_photos {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
 }
 
 .apartment_photo,
@@ -9,16 +10,16 @@
 }
 
 .selected_photo {
-    width: 100%;
-    margin: auto;
-    height: 20rem;
+    width: 98%;
+    margin: .5rem;
+    height: 15rem;
     position: relative;
 }
 
 .selected_photo img {
     width: 100%;
     height: 100%;
-    object-fit: fill;
+    object-fit: cover;
     border-radius: .5rem;
 }
 
@@ -35,15 +36,14 @@
 .more_photos {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     width: 100%;
-    margin: 1rem 0rem;
 }
 
 .apartment_photo {
-    width: 6rem;
-    height: 6rem;
+    width: 4rem;
+    height: 4rem;
     margin: .5rem;
 }
 

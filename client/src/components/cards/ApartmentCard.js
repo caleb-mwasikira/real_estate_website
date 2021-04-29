@@ -64,9 +64,13 @@ export default class ApartmentCard extends Component {
                         <p className="apartment_address">{ apartment_address }</p>
                     </div>
 
-                    <ApartmentFacilities 
-                        facilities={ facilities }
-                    />
+                    {
+                        facilities !== null
+                        ?   <ApartmentFacilities 
+                                facilities={ facilities }
+                            />
+                        :   <div></div>
+                    }
                 </div>
             </div>
         )

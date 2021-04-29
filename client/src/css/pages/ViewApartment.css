@@ -1,12 +1,14 @@
 .view_apartments {
     font-size: 1rem;
     color: var(--color_text);
+    height: 100vh;
 }
 
 .main_content {
     display: flex;
     flex-direction: column;
-    margin: 1rem 0rem;
+    justify-content: space-between;
+    margin: .5rem 0rem;
 }
 
 .main_content_right {
@@ -41,10 +43,35 @@
     background-color: var(--color_bg_shade);
 }
 
-.apartment_row {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+#carousel_provider {
+    position: relative;
+}
+
+.info_message {
+    width: 5rem;
+    height: 5rem;
+    margin: auto;
+}
+
+/* Override ApartmentCard css */
+.apartment_card {
+    padding: .5rem;
+}
+
+.apartment_card .apartment_image img {
+    border-radius: .5rem;
+}
+
+#prev_btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#next_btn {
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 @media only screen and (min-width: 800px) {
@@ -54,11 +81,28 @@
         justify-content: space-evenly;
     }
 
-    .main_content_right {
-        width: 60%;
+    .search_apartment {
+        width: 35%;
     }
 
-    .search_apartment {
-        width: 30%;
+    .main_content_right {
+        width: 70%;
     }
+
+    .main_apartment_card {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .main_apartment_card .apartment_photos {
+        width: 50%;
+        padding: .2rem;
+    }
+
+    .main_apartment_card .apartment_details {
+        width: 50%;
+        padding: .2rem;
+    }
+
+    
 }
