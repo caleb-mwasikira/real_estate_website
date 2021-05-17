@@ -10,9 +10,9 @@ export default class CustomCheckBox extends Component {
             <div className="form-group">
                 <label className="checkbox">
                     <input type="checkbox" />
-                    <span>
+                    <div>
                         <p className="checkbox-text">{ name }</p>
-                    </span>
+                    </div>
                 </label>
             </div>
         );

@@ -1,9 +1,11 @@
 import React from "react";
-import './App.css';
+import './css/App.css';
 
 // import LandingPage from "./pages/LandingPage";
 // import SignUpPage from "./pages/SignUpPage";
-import ViewApartment from "./pages/ViewApartment";
+// import ViewApartment from "./pages/ViewApartment";
+import BookPropertyForm from "./components/cards/BookPropertyForm";
+
 
 export default class App extends React.Component {
   render() {
@@ -13,7 +15,9 @@ export default class App extends React.Component {
 
         {/* <SignUpPage /> */}
 
-        <ViewApartment />
+        {/* <ViewApartment /> */}
+
+        <BookPropertyForm />
       </div>
     );
   }

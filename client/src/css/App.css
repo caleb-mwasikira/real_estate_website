@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "Inconsolata";
-  src: url("./fonts/Inconsolata.ttf");
+  font-family: "Sen";
+  src: url("../fonts/Sen/Sen-Regular.ttf");
 }
 
 *, *::before, *::after {
@@ -24,8 +24,8 @@ body {
   margin: 0;
   width: 100vw;
   min-height: 100vh;
-  font-family: "Inconsolata", 'Sen', sans-serif;
-  font-size: 2rem;
+  font-family: "Sen";
+  font-size: 1rem;
   line-height: 1.6;
   overflow-x: hidden;
 }
@@ -44,8 +44,8 @@ h3 {
   --color_bg_shade: #f8f9fa;
   --color_success: #38b000;
   --color_warning: #ffb703;
-  --color_text: #3c4043; 
-  --color_secondary_text: #5f6368;
+  --color_text: #5e5f62; 
+  --color_secondary_text: #0b1d39;
 }
 
 li {
@@ -55,25 +55,36 @@ li {
 a {
   text-decoration: none;
   color: var(--color_dark);
+  font-size: 1rem;
+  margin: auto;
+  height: fit-content;
 }
 
-p {
+.title {
   margin: .5rem;
+  font-size: 1.5rem;
+  color: var(--color_secondary_text);
+}
+
+.para {
+  font-size: 1rem;
+  color: var(--color_text);
 }
 
 .btn_filled,
 .btn_outlined {
-  font-family: "Inconsolata", 'Sen', sans-serif;
+  font-family: "Sen";
 }
 
 .btn_filled {
   border: none;
-  padding: .5rem 1rem;
+  padding: .6rem 1rem;
   cursor: pointer;
   font-size: 1rem;
+  font-family: "Sen";
   color: var(--color_white);
   background-color: var(--color_primary);
-  border-radius: .2rem;
+  border-radius: .5rem;
 }
 
 .btn_outlined {
@@ -81,8 +92,9 @@ p {
   padding: .5rem 1rem;
   cursor: pointer;
   font-size: 1rem;
+  font-family: "Sen";
   color: var(--color_text);
-  background-color: var(--color_white);
+  background-color: inherit;
   border-radius: .2rem;
 }
 

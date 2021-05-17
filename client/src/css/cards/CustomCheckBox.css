@@ -2,33 +2,34 @@
 .checkbox {
     display: flex;
     flex-direction: row;
-    width: 60%;
-    margin: .5rem auto;
+    width: fit-content;
+    margin: .2rem .2rem .2rem 0rem;
     cursor: pointer;
     position: relative;
 }
 
-.checkbox > span {
+.checkbox > div {
     color: var(--color_text);
     font-size: .9rem;
 }
 
 .checkbox > input {
-    height: 1.5rem;
-    width: 1.5rem;
-    margin: .5rem;
+    height: .5rem;
+    width: .5rem;
+    margin-right: .5rem;
     -webkit-appearance: none;
     -moz-appearance: none;
     -o-appearance: none;
     appearance: none;
     border: 2px solid var(--color_primary);
-    border-radius: 4px;
+    border-radius: 25%;
     outline: none;
     transition-duration: 0.3s;
     cursor: pointer;
 }
 
 .checkbox > input:checked {
+    border: 2px solid var(--color_white);
     background-color: var(--color_primary);
 }
 
@@ -43,7 +44,7 @@
 }
 
 .checkbox > input:active {
-    border: .1rem solid var(--color_primary);
+    border: 2px solid var(--color_primary);
 }
 
 /* End of custom checkbox */
