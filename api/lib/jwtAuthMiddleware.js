@@ -30,7 +30,7 @@ function isAuthenticated(req, res, next) {
   
     if(token == null) {
         res.status(401).json({
-            status: "fail",
+            status: false,
             data: {
                 message: "Unauthorized Page Access. Please Login To Continue"
             }
@@ -41,7 +41,7 @@ function isAuthenticated(req, res, next) {
     jwt.verify(token, process.env.SECRET_TOKEN, (error, verifiedJwt) => {
         if(error) {
             res.status(500).json({
-                status: "error",
+                status: false,
                 message: error.message,
                 error: error
             });
@@ -72,7 +72,7 @@ function isAuthorised(req, res, next) {
 
         if(!dbAuthorisations) {
             res.status(400).json({
-                status: "fail",
+                status: false,
                 data: {
                     message: `No Active Access Control Set For Group:${userAuthorisation}`
                 }
@@ -87,7 +87,7 @@ function isAuthorised(req, res, next) {
             next();
         }else {
             res.status(401).json({
-                status: "fail",
+                status: false,
                 data: {
                     message: `You Are Not Authorised To View This Resource. Please Contact Your Admin To Increase Your Clearance`
                 }

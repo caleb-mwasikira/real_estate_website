@@ -16,34 +16,22 @@ router.get('/',
     isAuthenticated, isAuthorised, 
     UserController.getAllUsers, 
     (req, res, next) => {
-    res.status(200).json({
-        status: "success",
-        data: req.data
-    });
+    res.status(200).json(req.result);
     return;
 });
 
 router.get('/user', UserController.getUser, (req, res, next) => {
-    res.status(200).send({
-        status: "success",
-        data: req.data
-    });
+    res.status(200).send(req.result);
     return;
 });
 
 router.post('/user', UserController.updateUser, (req, res, next) => {
-    res.status(200).send({
-        status: "success",
-        data: req.data
-    });
+    res.status(200).send(req.result);
     return;
 });
 
 router.delete('/user', UserController.deleteUser, (req, res, next) => {
-    res.status(200).send({
-        status: "success",
-        data: req.data
-    });
+    res.status(200).send(req.result);
     return;
 });
 

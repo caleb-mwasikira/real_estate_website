@@ -7,9 +7,7 @@ const PhotoSchema = mongoose.Schema({
 });
 
 const AgentSchema = mongoose.Schema({
-    full_name: String,
-    email: String,
-    phone_number: String,
+    name: String,
     img_url: String
 });
 

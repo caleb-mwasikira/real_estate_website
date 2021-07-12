@@ -60,6 +60,7 @@ app.use('/apartments', apartmentsRouter);
  * -------------- HANDLE PAGE ERRORS --------------
  */
 const createError = require('http-errors');
+const { Http2ServerRequest } = require('http2');
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

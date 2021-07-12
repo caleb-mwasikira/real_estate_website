@@ -1,58 +1,81 @@
 const User = require("../models/UserModel");
 const { genPassword, validPassword } = require("../lib/passwordUtils");
-const { buildSearchQuery, sendServerError } = require('./BaseController');
+const { sendServerError } = require('./BaseController');
 
 
 function getAllUsers(req, res, next) {
     User.find({}, (error, users) => {
         if(error) sendServerError(res, error);
 
-        req.data = users;
+        req.result = {
+            status: users ? true : false,
+            message: `Found ${users.length} users`,
+            data: users
+        }
         next();
     });
 }
 
 function getUser(req, res, next) {
-    const searchQuery = buildSearchQuery(req);
-    const key = Object.keys(searchQuery).shift();
-
-    User.findOne(searchQuery, (error, dbUser) => {
+    User.findOne({ email: req.body.email }, (error, dbUser) => {
         if(error) sendServerError(res, error);
 
         if(!dbUser) {
-            res.status(400).send({
-                status: "fail",
-                data: {
-                    message: `User With ${key} ${searchQuery[key]} Does Not Exist`
-                }
-            });
-            return;
+            req.result = {
+                status: false,
+                message: `User with email ${req.body.email} does not exist`,
+                data: null,
+            }
+            next();
         } else {
-            req.data = dbUser;
+            req.result = {
+                status: true,
+                message: `User with email ${req.body.email} found`,
+                data: dbUser,
+            };
             next();
         }
     });
 }
 
-function signupUser(req, res, next) {
-    const { hash, salt } = genPassword(req.body.password);
+function signupUser(req, res, next) {    
+    if(req.result.status) {
+        /**
+         * If user already exists.
+         * 409; The request could not be completed due to a 
+         * conflict with the current state of the resource.
+         */
+        res.status(409).send({
+            status: false,
+            message: `User with email ${req.body.email} already exists. Cannot create duplicate`,
+            data: null,
+        });
+    } else {
+        const { hash, salt } = genPassword(req.body.password);
 
-    const newUser = new User({
-        username: req.body.username,
-        email: req.body.email,
-        password: {
-            hash: hash,
-            salt: salt
-        },
-        admin: false
-    });
+        const newUser = new User({
+            username: req.body.username,
+            email: req.body.email,
+            password: {
+                hash: hash,
+                salt: salt
+            },
+            admin: false
+        });
 
-    newUser.save()
-            .then((dbUser) => {
-                req.data = dbUser;
-                next();
-            })
-            .catch((error) => sendServerError(res, error));
+        newUser.save()
+                .then((dbUser) => {
+                    req.result = {
+                        status: true,
+                        message: `Created a new account for ${newUser.username}`,
+                        data: dbUser,
+                    }
+                    next();
+                })
+                .catch((error) => sendServerError(res, error));
+    }
+
+    
 }
 
 function loginUser(req, res, next) {
@@ -61,23 +84,21 @@ function loginUser(req, res, next) {
 
         if(!dbUser) {
             res.status(400).send({
-                status: "fail",
-                data: {
-                    message: `User With Account ${req.body.email} Does Not Exist`
-                }
+                status: false,
+                message: `User with email ${req.body.email} does not exist`,
+                data: null,
             });
             return;
         }
 
         if(validPassword(req.body.password, dbUser.password.hash, dbUser.password.salt)) {
-            req.data = dbUser;
+            req.result = dbUser;
             next();
         } else {
             res.status(400).send({
-                status: "fail",
-                data: {
-                    message: `Invalid Password For ${req.body.email}`
-                }
+                status: false,
+                message: `Invalid password for account ${req.body.email}`,
+                data: null,
             });
             return;
         }
@@ -85,10 +106,7 @@ function loginUser(req, res, next) {
 }
 
 function updateUser(req, res, next) {
-    const searchQuery = buildSearchQuery(req);
-    const key = Object.keys(searchQuery).shift();
-
-    User.findOneAndUpdate(searchQuery, req.body,
+    User.findOneAndUpdate({ email: req.body.email }, req.body,
     {
         new: true,
         upsert: true,
@@ -100,37 +118,39 @@ function updateUser(req, res, next) {
 
         if(!dbUser) {
             res.status(400).send({
-                status: "fail",
-                data: {
-                    message: `User With ${key} ${searchQuery[key]} Does Not Exist`
-                }
+                status: false,
+                message: `User with email ${req.body.email} does not exist`,
+                data: null,
             });
             return;
         } else {
-            req.data = dbUser;
+            req.result = {
+                status: true,
+                message: `Updated account ${req.body.email}`,
+                data: dbUser,
+            };
             next();
         }
     });
 }
 
 function deleteUser(req, res, next) {
-    const searchQuery = buildSearchQuery(req);
-    const key = Object.keys(searchQuery).shift();
-
-    User.deleteOne(searchQuery, (error, dbUser) => {
+    User.deleteOne({ email: req.body.email }, (error, dbUser) => {
         if(error) sendServerError(res, error);
 
         if(dbUser.n === 0) {
             res.status(400).send({
-                status: "fail",
-                data: {
-                    message: `User With ${key} ${searchQuery[key]} Does Not Exist`
-                }
+                status: false,
+                message: `User with email ${req.body.email} does not exist`,
+                data: null,
             });
             return;
         } else {
-            dbUser.message = `Successfully Deleted User With ${key} ${searchQuery[key]}`;
-            req.data = dbUser;
+            req.result = {
+                status: true,
+                message: `Deleted user with email ${req.body.email}`,
+                data: dbUser,
+            };
             next();
         }
     })
